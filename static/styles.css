@@ -1,0 +1,45 @@
+body {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.top-header {
+  background-color: #dbbd13dc;
+  font-family: "Anton", sans-serif;
+  color: #e8e8e8;
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0px;
+}
+.form-class {
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+.upload-class {
+  width: 15%;
+  background-color: #dbbd13dc;
+}
+
+.button-class {
+  width: 15%;
+  font-size: 1.5rem;
+  color: #f4f4f4;
+  background-color: #dbbd13dc;
+  padding: 5px;
+  margin: 20px;
+  border: 3px solid #f4f4f4;
+  border-radius: 20px;
+}
+
+.image-class {
+  height: 300px;
+  width: 300px;
+}
+button:hover {
+  background-color: #654062;
+  color: #f4f4f4;
+  border: 3px solid #f4f4f4;
+}

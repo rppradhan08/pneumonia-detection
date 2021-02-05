@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block head %} <title>Result</title> {% endblock %}
+
+{% block body %}
+
+<div>
+    <h2>Uploaded Image : {{name}}</h2>
+</div>
+<img src="static\uploads\{{name}}" alt="uploaded image" class="image-class">
+<div>
+    {% if result == 1 %}
+        <div><h2 style="color:rgba(197, 94, 94, 0.753);">PNEUMONIA</h2></div>
+    {% else %}
+        <div><h2 style="color:rgba(2, 104, 45, 0.781);">NORMAL</h2></div>
+    {% endif %}
+</div>
+<div>
+    <form action="{{ url_for('home')}}">
+        <button type="submit" class="button-class">Home</button>
+    </form>
+</div>
+{% endblock %}
