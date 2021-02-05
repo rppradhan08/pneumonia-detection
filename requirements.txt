@@ -17,4 +17,4 @@ wincertstore==0.2
 tensorflow==2.1.0
 Keras==2.3.1
 Werkzeug==1.0.1
-opencv-python==3.4.2
+opencv-contrib-python
