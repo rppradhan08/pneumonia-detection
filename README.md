@@ -99,7 +99,7 @@ Refer `Pneumonia_Detection_CNN.ipynb` to find details regarding data analysis an
 Since this is a classification problem, to check model performance `Confusion Matrix` and `Classification Report` are used.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/cunfusion_mat.PNG">
+<img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/cunfusion_mat.png">
 </p>
 
 ### Application Development
