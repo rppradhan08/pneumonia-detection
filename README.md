@@ -32,7 +32,6 @@
 - [About The Project](#about-the-project)
   - [Steps involved](#steps-involved)
   - [Tools used](#tools-used)
-  - [Libraries](#libraries)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Data Analysis and Model Building](#data-analysis-and-model-building)
@@ -51,10 +50,10 @@ The dataset is organized into 3 folders (train, val & test) and contains subfold
 
 ### Steps involved
 
-- Reading data from source and preprocessing it using OpenCV
-- Performing data preprocessing before feeding the data to the model
-- Building sequential model architecture using keras
-- Using data augmentating to prevent the model from overfitting during training phase
+- Reading data from source and preprocessing it using OpenCV.
+- Performing data preprocessing before feeding the data to the model.
+- Building sequential model architecture using keras.
+- Using data augmentating to prevent the model from overfitting during training phase.
 - Creating web application using flask to detect Pneumonia upon receiving the preprocessed X-ray.
 
 ### Tools used
@@ -67,9 +66,11 @@ Following are the tools/frameworks used in developing the application:
 - [HTML](https://en.wikipedia.org/wiki/HTML)
 - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
 
-### Libraries
+## Getting Started
 
-Below is the list of python libraries used in this project:
+### Installation
+
+To install the libraries, execute either of below commands in Anaconda prompt or terminal
 
 ```
 pip install pandas
@@ -82,14 +83,10 @@ pip install tensorflow
 pip install opencv-contrib-python
 ```
 
-## Getting Started
-
-### Installation
-
-To install any of the aforementioned libraries, below command can be written in the Anaconda prompt or terminal :
+or
 
 ```
-pip install <package_name>
+pip install -r requirements.txt
 ```
 
 ### Data Analysis and Model Building
@@ -99,12 +96,13 @@ Refer `Pneumonia_Detection_CNN.ipynb` to find details regarding data analysis an
 Since this is a classification problem, to check model performance `Confusion Matrix` and `Classification Report` are used.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/cunfusion_mat.png">
+<b>Confusion Matrix</b><br>
+<img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/cunfusion_mat.png" height="200px">
 </p>
 
 ### Application Development
 
-After model selection, the web application is developed using `flask` which is a python based web-framework. For source code refer `app.py`.
+After model development, the web application is developed using `flask` which is a python based web-framework. For source code refer `app.py`.
 
 Below are few snapshots of application in use:
 
