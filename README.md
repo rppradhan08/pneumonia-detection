@@ -1,33 +1,31 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/rppradhan08/Car_Price_Prediction)
-![GitHub forks](https://img.shields.io/github/forks/rppradhan08/Car_Price_Prediction?color=green)
-![contributors-shield](https://img.shields.io/github/contributors/rppradhan08/Car_Price_Prediction)
+![GitHub Repo stars](https://img.shields.io/github/stars/rppradhan08/pneumonia-detection)
+![GitHub forks](https://img.shields.io/github/forks/rppradhan08/pneumonia-detection?color=green)
+![contributors-shield](https://img.shields.io/github/contributors/rppradhan08/pneumonia-detection)
 [![LinkedIn][linkedin-shield]](https://in.linkedin.com/in/raj-praveen-pradhan-306625101)
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/rppradhan08/Car_Price_Prediction">
-    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/prj_name.PNG" alt="Logo" width="200px" height="40px">
+  <a href="https://github.com/rppradhan08/pneumonia-detection">
+    <img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/logo.PNG" alt="Logo" width="200px" height="100px">
   </a>
 
   <p align="center">
     Pneumonia Detection using CNN
     <br />
-    <a href="https://github.com/rppradhan08/Car_Price_Prediction"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/rppradhan08/pneumonia-detection"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/rppradhan08/Car_Price_Prediction">View Demo</a>
+    <a href="https://github.com/rppradhan08/pneumonia-detection">View Demo</a>
     ·
-    <a href="https://github.com/rppradhan08/Car_Price_Prediction/issues">Report Bug</a>
+    <a href="https://github.com/rppradhan08/pneumonia-detection/issues">Report Bug</a>
   </p>
 </p>
 
-
-
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
@@ -37,50 +35,53 @@
   - [Libraries](#libraries)
 - [Getting Started](#getting-started)
   - [Installation](#installation)
-  - [Data Analysis and Model Selection](#data-analysis-and-model-selection)
+  - [Data Analysis and Model Building](#data-analysis-and-model-building)
   - [Application Development](#application-development)
-  - [Model Deployment](#model-deployment)
 - [Contact](#contact)
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
+
 <p align="center">
-    <a href="https://carprizpred.herokuapp.com">
-        <img src="images/prj_home.PNG" height="35%" width="50%">
-    </a>
+  <img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/person1661_virus_2872.jpeg" height="250px" width="300px">
 </p>
-This project uses <a href="https://www.kaggle.com/nehalbirla/vehicle-dataset-from-cardekho?select=car+data.csv">vehicle dataset</a> from cardekho to predict car price.
-Dataset contains information about used cars listed on www.cardekho.com.
+This project uses <a href="https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia">Chest X-Ray dataset</a> from kaggle.
+The dataset is organized into 3 folders (train, val & test) and contains subfolders for each image category (Pneumonia/Normal). There are 5,863 X-Ray images (JPEG) and 2 categories (Pneumonia/Normal). These images are used for building an CNN model using keras to detect pneumonia in patients based on X-ray reports. After model building the best performing model is used to build a flask base web application.
 
 ### Steps involved
-* Reading data from source and performing EDA
-* Performing feature engineering to feed desired data into ML model
-* Finding best set of hyper-parameters using Randomized Search CV to train the model
-* Evaluating various Regressor ML models using cross-validation and residual plot
-* Creating web application using flask to predict car price based on various attributes.
-* Finally, deploying the web application on cloud based platform (i.e. Heroku) 
+
+- Reading data from source and preprocessing it using OpenCV
+- Performing data preprocessing before feeding the data to the model
+- Building sequential model architecture using keras
+- Using data augmentating to prevent the model from overfitting during training phase
+- Creating web application using flask to detect Pneumonia upon receiving the preprocessed X-ray.
 
 ### Tools used
+
 Following are the tools/frameworks used in developing the application:
-* [CSS](https://en.wikipedia.org/wiki/CSS)
-* [Python](https://www.python.org/)
-* [Flask](https://palletsprojects.com/p/flask/)
-* [HTML](https://en.wikipedia.org/wiki/HTML)
-* [Heroku](https://www.heroku.com/)
-  
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [Python](https://www.python.org/)
+- [Flask](https://palletsprojects.com/p/flask/)
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
+
 ### Libraries
+
 Below is the list of python libraries used in this project:
+
 ```
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import os
-import sklearn
-import flask
+pip install pandas
+pip install numpy
+pip install matplotlib
+pip install sklearn
+pip install flask
+pip install werkzeug
+pip install tensorflow
+pip install opencv-contrib-python
 ```
+
 ## Getting Started
 
 ### Installation
@@ -91,53 +92,35 @@ To install any of the aforementioned libraries, below command can be written in 
 pip install <package_name>
 ```
 
-### Data Analysis and Model Selection
+### Data Analysis and Model Building
 
-Refer `Car_Price_Prediction.ipynb` to find details regarding data analysis and model selection.
+Refer `Pneumonia_Detection_CNN.ipynb` to find details regarding data analysis and model building.
 
-To check model performance, `Residual plot` and scatter plot between `y_test`-`y_pred` are used.
-
-<p align="center">
-<img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/resuidual_plot.png">
-</p>
-
-Below are the final metrics obtained for various models that were considered in analysis.
+Since this is a classification problem, to check model performance `Confusion Matrix` and `Classification Report` are used.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/model_metrics.PNG" height="150px">
+<img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/cunfusion_mat.PNG">
 </p>
-
 
 ### Application Development
 
 After model selection, the web application is developed using `flask` which is a python based web-framework. For source code refer `app.py`.
 
 Below are few snapshots of application in use:
-* Step 1 Filling attributes related to car
+
+- Step 1 Uploading X-Ray
   <p align="center">
-    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_1.PNG" height="300px">
+    <img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/home.PNG" height="300px">
   </p>
-* Step 2 Displaying predicted cost 
+- Step 2 Displaying Result
   <p align="center">
-    <img src="https://raw.githubusercontent.com/rppradhan08/Car_Price_Prediction/master/images/step_2.PNG" height="100px">
+    <img src="https://raw.githubusercontent.com/rppradhan08/pneumonia-detection/master/images/normal.PNG" height="200px">
   </p>
-
-### Model Deployment
-
-Model is deployed on `heroku` which is a cloud based PaaS. 
-
-Application link : https://carprizpred.herokuapp.com/
 
 <!-- CONTACT -->
+
 ## Contact
 
 Raj Praveen Pradhan - [LinkedIn](https://in.linkedin.com/in/raj-praveen-pradhan-306625101)
 
-Project Link: [https://github.com/rppradhan08/Car_Price_Prediction](https://github.com/rppradhan08/Car_Price_Prediction)
-
-
-
-
-
-
-
+Kaggle Kernel: [https://www.kaggle.com/rajpraveenpradhan/keras-based-cnn-model-for-pneumonia-detection](https://www.kaggle.com/rajpraveenpradhan/keras-based-cnn-model-for-pneumonia-detection)
