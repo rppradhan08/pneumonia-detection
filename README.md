@@ -36,6 +36,7 @@
   - [Installation](#installation)
   - [Data Analysis and Model Building](#data-analysis-and-model-building)
   - [Application Development](#application-development)
+- [Usage](#usage)
 - [Contact](#contact)
 
 <!-- ABOUT THE PROJECT -->
@@ -70,20 +71,7 @@ Following are the tools/frameworks used in developing the application:
 
 ### Installation
 
-To install the libraries, execute either of below commands in Anaconda prompt or terminal
-
-```
-pip install pandas
-pip install numpy
-pip install matplotlib
-pip install sklearn
-pip install flask
-pip install werkzeug
-pip install tensorflow
-pip install opencv-contrib-python
-```
-
-or
+For proper execution of application firstly create an environment, then to install prerequisite libraries execute below command in terminal.
 
 ```
 pip install -r requirements.txt
@@ -116,6 +104,11 @@ Below are few snapshots of application in use:
   </p>
 
 <!-- CONTACT -->
+
+## Usage
+
+To run this application firstly execute `python app.py`, after which the flask built-in server would start hosting the application at localhost i.e.
+`http://127.0.0.1:5000/`
 
 ## Contact
 
